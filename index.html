@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js"></script>
+
+<body>
+    <nav>
+        <ul>
+            <li class='brand'><img src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-icon-marilyn-scott-0.png" width="200" alt="spotify icon marilyn scott" /></li>
+            <li>Home</li>
+            <li>Your Library</li>
+            <li>About</li>
+            <li style="margin-left: auto;padding-right: 2rem;">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="pages/acc.html" target="">Account</a>
+                        <a href="pages/settings.html">Settings</a>
+                        <a href="pages/about.html">About</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+    </div>
+
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spotify Web Playback SDK Quick Start</title>
+</head>
+
+<body>
+    <h1>Spotify Web Playback SDK Quick Start</h1>
+    <button id="togglePlay">Toggle Play</button>
+
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script>
+        window.onSpotifyWebPlaybackSDKReady = () => {
+            const token = 'BQCBwoF9Npnk75OD-mifyzlM2bd76P59zL0eptkAWLp-WEemzebc-R9mqeNBFdy0ssIDhoaL_mwrbqQ5QzhrPOwCFEMkJ29inowqB6nRwywsgOK3bJLbNBt3pemiHq4U0McqQk_YXM2U7Q7dCDF_zq5jJMrTPZuYzuVkGdax-dgyqbFK7MZwoteYkY4';
+            const player = new Spotify.Player({
+                name: 'DinoSpot',
+                getOAuthToken: cb => {
+                    cb(token);
+                },
+                volume: 0.5
+            });
+
+            // Ready
+            player.addListener('ready', ({
+                device_id
+            }) => {
+                console.log('Ready with Device ID', device_id);
+            });
+
+            // Not Ready
+            player.addListener('not_ready', ({
+                device_id
+            }) => {
+                console.log('Device ID has gone offline', device_id);
+            });
+
+            player.addListener('initialization_error', ({
+                message
+            }) => {
+                console.error(message);
+            });
+
+            player.addListener('authentication_error', ({
+                message
+            }) => {
+                console.error(message);
+            });
+
+            player.addListener('account_error', ({
+                message
+            }) => {
+                console.error(message);
+            });
+
+            document.getElementById('togglePlay').onclick = function() {
+                player.togglePlay();
+            };
+
+            player.connect();
+        }
+    </script>
+
+</body>
+
+</html> -->
